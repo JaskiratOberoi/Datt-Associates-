@@ -1,0 +1,17 @@
+{
+  "approved": true,
+  "approvedAt": "2026-08-31",
+  "medium": "code-rendered comp (no image generation in harness; user-approved substitution)",
+  "source": "comp3.html rendered against css/styles.css + js/main.js, captured via CDP at 1440x1200",
+  "prompt": "Affixed Stamp composition: first viewport is one monumental perforated stamp (perf edge strips, -1.2deg tilt, drop shadow) affixed to the buff security-paper sheet; stamp interior is an intaglio-green engraved field (gradient 165deg green->green-deep, inset shadow, on-green-2 inner outline) holding the runtime guilloche rosette, Devanagari co-title, DATT ASSOCIATES in Libre Caslon Display caps, mono role line, italic hook; engraved corner marks DA / दत्त; red circular NEW DELHI / CHAMBERS / BY APPT. postmark cancels the top-right corner with feTurbulence ink mask; below: red stamped REQUEST A CONSULTATION endorsement + note; then the two partner stamps; remaining sections (schedule, forums, procedure, contact) continue the recorded system unchanged.",
+  "inventory": [
+    { "region": "mega stamp frame", "medium": "HTML/CSS (perf strips, drop shadow, rotation)" },
+    { "region": "engraved green interior", "medium": "CSS gradient + inset shadow + outline" },
+    { "region": "guilloche rosette", "medium": "runtime SVG (hypotrochoid, js/main.js)" },
+    { "region": "postmark", "medium": "authored SVG ring text + feTurbulence mask" },
+    { "region": "corner marks, serial", "medium": "HTML/CSS, tokens" },
+    { "region": "CTA endorsement", "medium": "existing .stamp-cta component" },
+    { "region": "partner stamps", "medium": "existing .stamp-card component, full content" }
+  ],
+  "colorsSampledFrom": "css/styles.css :root tokens (comp rendered from the same stylesheet, so sampled == tokens)"
+}

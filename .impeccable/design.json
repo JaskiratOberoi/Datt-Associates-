@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-31T00:00:00Z",
+  "title": "Design System: Datt Associates",
+  "extensions": {
+    "colorMeta": {
+      "paper":      { "role": "neutral", "displayName": "Security Paper", "canonical": "#e9e2cf", "tonalRamp": ["#2b2617", "#453d26", "#615636", "#7e7047", "#9c8c5c", "#bcae7f", "#d6cba7", "#efe9d8"] },
+      "paper-hi":   { "role": "neutral", "displayName": "Fresh Sheet", "canonical": "#f1ebdb", "tonalRamp": ["#2c281c", "#46412e", "#635c42", "#817858", "#a09670", "#bfb590", "#dad2b5", "#f3eee0"] },
+      "paper-tint": { "role": "neutral", "displayName": "Aged Tint", "canonical": "#e0d6ba", "tonalRamp": ["#2a2413", "#443b20", "#5f532e", "#7c6c3d", "#9a874f", "#b9a566", "#d3c393", "#ece4cc"] },
+      "ink":        { "role": "neutral", "displayName": "Document Ink", "canonical": "#221c10", "tonalRamp": ["#221c10", "#3d331d", "#594b2b", "#76643a", "#947e4a", "#b29a5d", "#cfb877", "#e9dba6"] },
+      "ink-soft":   { "role": "neutral", "displayName": "Faded Ink", "canonical": "#4c4330", "tonalRamp": ["#26210f", "#3f381f", "#4c4330", "#6f6244", "#8e7e56", "#ad9b6b", "#cab985", "#e5d9ad"] },
+      "green":      { "role": "primary", "displayName": "Intaglio Green", "canonical": "#0e3b2e", "tonalRamp": ["#092b21", "#0e3b2e", "#1a5240", "#2f6b56", "#48856d", "#679f86", "#8fbaa3", "#bfd6c6"] },
+      "green-deep": { "role": "primary", "displayName": "Plate Shadow Green", "canonical": "#092b21", "tonalRamp": ["#051a13", "#092b21", "#12402f", "#1f573f", "#316e51", "#4a8666", "#6e9f80", "#9db9a2"] },
+      "green-line": { "role": "primary", "displayName": "Engraved Line Green", "canonical": "#2f6b56", "tonalRamp": ["#0b2b20", "#144031", "#1f5543", "#2f6b56", "#468169", "#61977e", "#83ad96", "#abc4b3"] },
+      "on-green":   { "role": "primary", "displayName": "Paper on Green", "canonical": "#e7e0cb", "tonalRamp": ["#2a2716", "#443f26", "#5f5937", "#7d754a", "#9b915f", "#baaf7c", "#d4cba3", "#eee9d8"] },
+      "on-green-2": { "role": "primary", "displayName": "Verdigris on Green", "canonical": "#a8c2b2", "tonalRamp": ["#16241c", "#263c30", "#385545", "#4d6e5b", "#648872", "#7ea28b", "#9cbba7", "#c4d6ca"] },
+      "red":        { "role": "secondary", "displayName": "Rubber-Stamp Red", "canonical": "#a8231f", "tonalRamp": ["#3a0906", "#5c110c", "#7f1913", "#a8231f", "#c53a33", "#d95f56", "#e78a82", "#f2bab4"] },
+      "red-hi":     { "role": "secondary", "displayName": "Fresh-Ink Red", "canonical": "#bf2b24", "tonalRamp": ["#3f0a06", "#63130c", "#8c1c15", "#bf2b24", "#d3453c", "#e26a61", "#ed948c", "#f6c2bd"] },
+      "gold":       { "role": "tertiary", "displayName": "Court-Fee Gold", "canonical": "#8a6d2f", "tonalRamp": ["#2b210b", "#443512", "#5f4a1a", "#7a5f24", "#8a6d2f", "#a78a45", "#c4aa66", "#ddc996"] },
+      "gold-text":  { "role": "tertiary", "displayName": "Gold Text", "canonical": "#6d551f", "tonalRamp": ["#251b07", "#3c2d0e", "#544015", "#6d551f", "#8a6d2f", "#a98a48", "#c6a96c", "#dfc99b"] }
+    },
+    "typographyMeta": {
+      "display":  { "displayName": "Display (Engraved Caps)", "purpose": "Firm name inside the hero mega-stamp only; uppercase Libre Caslon Display." },
+      "headline": { "displayName": "Headline", "purpose": "Section headings, centered between double hairline rules." },
+      "title":    { "displayName": "Title", "purpose": "Row, clause and partner names in the display face." },
+      "body":     { "displayName": "Body", "purpose": "Caslon Text prose at 52–65ch; italic body is the annotation voice." },
+      "label":    { "displayName": "Label (Mono)", "purpose": "Courier Prime uppercase — nav, roles, forums, captions, marks. Smaller size, wider tracking." },
+      "serial":   { "displayName": "Serial", "purpose": "Courier Prime 700 document numbers — bottom-right of the hero stamp, top-right of the gate document." },
+      "co-title": { "displayName": "Devanagari Co-title", "purpose": "Bilingual masthead line above the engraved Latin name; also the hero's top-right corner mark." }
+    },
+    "shadows": [
+      { "name": "card-lift", "value": "0 10px 30px -14px rgba(34,28,16,.55)", "purpose": "Raised paper: partner stamp cards." },
+      { "name": "document-lift", "value": "0 18px 50px -12px rgba(0,0,0,.55)", "purpose": "Gate document floating over the scrim." },
+      { "name": "affix-lift", "value": "filter: drop-shadow(0 18px 34px rgba(34,28,16,.35))", "purpose": "Hero mega-stamp; drop-shadow so the perforated edge casts a punched silhouette." },
+      { "name": "engraved-press", "value": "inset 0 0 50px rgba(0,0,0,.35)", "purpose": "Intaglio recession of the hero's green interior; the ledger uses the inset-top variant inset 0 20px 40px -30px rgba(0,0,0,.6)." },
+      { "name": "stamp-hover", "value": "0 6px 18px -6px rgba(168,35,31,.45)", "purpose": "Red ink glow under stamp buttons on hover." },
+      { "name": "fee-tack", "value": "1px 2px 4px -2px rgba(109,85,31,.5)", "purpose": "Tiny gummed-chit shadow on fee marks." }
+    ],
+    "motion": [
+      { "name": "stamp-transition", "value": "0.18s ease", "purpose": "Stamp button rotation/color/shadow on hover." },
+      { "name": "slam", "value": "0.38s cubic-bezier(.19,1,.22,1)", "purpose": "Gate stamp slam-in (scale 2.1 → 0.96 → 1)." },
+      { "name": "gate-lift", "value": "0.5s ease", "purpose": "Gate opacity/visibility fade after the 900ms stamp hold." },
+      { "name": "row-hover", "value": "background-color 0.2s ease", "purpose": "Schedule row highlight to Fresh Sheet." }
+    ],
+    "breakpoints": [
+      { "name": "md", "value": "900px" },
+      { "name": "sm", "value": "640px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Stamp Button",
+      "kind": "button",
+      "refersTo": "button-stamp",
+      "description": "Rubber-stamp endorsement: double red border, transparent fill, slight rotation, ink-grunge mask; squares up and glows on hover.",
+      "html": "<button class=\"ds-stamp-btn\">I&nbsp;Agree&nbsp;&amp;&nbsp;Proceed</button>",
+      "css": ".ds-stamp-btn { display: inline-block; cursor: pointer; font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 1rem; letter-spacing: .1em; text-transform: uppercase; color: #a8231f; background: transparent; border: 3px double #a8231f; padding: .8rem 1.6rem; rotate: -1.5deg; mask-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence baseFrequency='.55' /%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .45 .72'/%3E%3C/filter%3E%3Crect width='400' height='200' filter='url(%23g)'/%3E%3C/svg%3E\"); mask-size: cover; transition: rotate .18s ease, color .18s ease, border-color .18s ease, box-shadow .18s ease; } .ds-stamp-btn:hover { rotate: 0deg; color: #bf2b24; border-color: #bf2b24; box-shadow: 0 6px 18px -6px rgba(168,35,31,.45); } .ds-stamp-btn:active { translate: 0 1px; } .ds-stamp-btn:focus-visible { outline: 2px solid #a8231f; outline-offset: 3px; }"
+    },
+    {
+      "name": "Stamp CTA",
+      "kind": "button",
+      "refersTo": "button-stamp-cta",
+      "description": "Larger two-line stamped endorsement used as the primary call to action below the hero stamp.",
+      "html": "<a class=\"ds-stamp-cta\" href=\"#\">Request a<br>Consultation</a>",
+      "css": ".ds-stamp-cta { display: inline-block; cursor: pointer; font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: clamp(1.05rem, 1.8vw, 1.35rem); line-height: 1.3; letter-spacing: .1em; text-transform: uppercase; text-align: center; text-decoration: none; color: #a8231f; background: transparent; border: 3px double #a8231f; padding: 1rem 2rem; rotate: -1.5deg; mask-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence baseFrequency='.55' /%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .45 .72'/%3E%3C/filter%3E%3Crect width='400' height='200' filter='url(%23g)'/%3E%3C/svg%3E\"); mask-size: cover; transition: rotate .18s ease, color .18s ease, border-color .18s ease, box-shadow .18s ease; } .ds-stamp-cta:hover { rotate: 0deg; color: #bf2b24; border-color: #bf2b24; box-shadow: 0 6px 18px -6px rgba(168,35,31,.45); } .ds-stamp-cta:active { translate: 0 1px; }"
+    },
+    {
+      "name": "Docket Nav",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Sticky translucent paper bar: green small-caps firm name, uppercase mono links that turn red on hover; link order follows the shipped page sequence.",
+      "html": "<nav class=\"ds-docket\"><p class=\"ds-docket-name\">Datt&nbsp;Associates</p><ul class=\"ds-docket-list\"><li><a href=\"#\">Partners</a></li><li><a href=\"#\">Practice</a></li><li><a href=\"#\">Forums</a></li><li><a href=\"#\">Contact</a></li></ul></nav>",
+      "css": ".ds-docket { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding: .55rem 1.5rem; background: rgba(241,235,219,.92); border-bottom: 2px solid #0e3b2e; box-shadow: 0 1px 0 #f1ebdb, 0 6px 16px -12px rgba(34,28,16,.5); } .ds-docket-name { margin: 0; font-family: 'Libre Caslon Display', Georgia, serif; font-size: 1.05rem; letter-spacing: .1em; text-transform: uppercase; color: #0e3b2e; } .ds-docket-list { display: flex; gap: 1.25rem; list-style: none; margin: 0; padding: 0; } .ds-docket-list a { font-family: 'Courier Prime', monospace; font-size: .82rem; letter-spacing: .12em; text-transform: uppercase; color: #4c4330; text-decoration: none; border-bottom: 1px solid transparent; padding-bottom: 2px; } .ds-docket-list a:hover { color: #a8231f; border-bottom-color: #a8231f; } .ds-docket-list a:focus-visible { outline: 2px solid #a8231f; outline-offset: 3px; }"
+    },
+    {
+      "name": "Mega-Stamp Hero",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "Signature hero: a monumental perforated stamp affixed to the paper at -1.2° with a green engraved interior, corner chits, and bottom-right serial; the postmark cancels its top-right corner.",
+      "html": "<div class=\"ds-mega-stamp\"><span class=\"ds-mperf ds-mperf-t\"></span><span class=\"ds-mperf ds-mperf-b\"></span><span class=\"ds-mperf ds-mperf-l\"></span><span class=\"ds-mperf ds-mperf-r\"></span><p class=\"ds-mega-corner ds-mc-tl\">DA</p><p class=\"ds-mega-corner ds-mc-tr\" lang=\"hi\">दत्त</p><div class=\"ds-mega-inner\"><p class=\"ds-mega-hindi\" lang=\"hi\">दत्त एसोसिएट्स</p><p class=\"ds-mega-name\">Datt Associates</p><p class=\"ds-mega-role\">Advocates&nbsp;·&nbsp;Solicitors&nbsp;·&nbsp;Consultants</p><p class=\"ds-mega-hook\">Counsel in civil, criminal, matrimonial &amp; consumer matters.</p><p class=\"ds-mega-serial\">No.&nbsp;DA&#8201;74&#8201;4952</p></div></div>",
+      "css": ".ds-mega-stamp { position: relative; width: min(560px, 100%); rotate: -1.2deg; background: #f1ebdb; filter: drop-shadow(0 18px 34px rgba(34,28,16,.35)); } .ds-mperf { position: absolute; z-index: 2; } .ds-mperf-t { top: -1px; left: 0; right: 0; height: 9px; background: radial-gradient(circle 4.5px at 8px 0, #e9e2cf 98%, transparent) repeat-x left top / 16px 9px; } .ds-mperf-b { bottom: -1px; left: 0; right: 0; height: 9px; background: radial-gradient(circle 4.5px at 8px 9px, #e9e2cf 98%, transparent) repeat-x left bottom / 16px 9px; } .ds-mperf-l { left: -1px; top: 0; bottom: 0; width: 9px; background: radial-gradient(circle 4.5px at 0 8px, #e9e2cf 98%, transparent) repeat-y left top / 9px 16px; } .ds-mperf-r { right: -1px; top: 0; bottom: 0; width: 9px; background: radial-gradient(circle 4.5px at 9px 8px, #e9e2cf 98%, transparent) repeat-y right top / 9px 16px; } .ds-mega-inner { position: relative; margin: 20px; padding: 2.5rem 2rem 2.9rem; background: linear-gradient(165deg, #0e3b2e 0%, #092b21 100%); color: #e7e0cb; text-align: center; outline: 2px solid #a8c2b2; outline-offset: -12px; box-shadow: inset 0 0 50px rgba(0,0,0,.35); } .ds-mega-corner { position: absolute; z-index: 1; margin: 0; font-family: 'Libre Caslon Display', Georgia, serif; font-size: 1.5rem; color: #e7e0cb; border: 1px solid #a8c2b2; padding: .25rem .6rem; background: rgba(9,43,34,.5); } .ds-mc-tl { top: 34px; left: 34px; } .ds-mc-tr { top: 34px; right: 34px; font-family: 'Noto Serif Devanagari', serif; } .ds-mega-hindi { font-family: 'Noto Serif Devanagari', serif; font-weight: 600; font-size: clamp(1rem, 2vw, 1.25rem); letter-spacing: .12em; color: #a8c2b2; margin: 0; } .ds-mega-name { font-family: 'Libre Caslon Display', Georgia, serif; font-weight: 400; font-size: clamp(1.9rem, 5.4vw, 4.4rem); line-height: 1.15; letter-spacing: .06em; text-transform: uppercase; margin: .2rem 0 0; color: #e7e0cb; } .ds-mega-role { font-family: 'Courier Prime', monospace; font-size: clamp(.78rem, 1.3vw, .92rem); letter-spacing: .22em; text-transform: uppercase; color: #a8c2b2; margin: .7rem 0 0; } .ds-mega-hook { font-family: 'Libre Caslon Text', Georgia, serif; font-style: italic; font-size: clamp(1rem, 1.6vw, 1.15rem); line-height: 1.55; max-width: 46ch; margin: 1.1rem auto 0; color: #e7e0cb; } .ds-mega-serial { position: absolute; right: 1.1rem; bottom: .7rem; margin: 0; font-family: 'Courier Prime', monospace; font-weight: 700; font-size: .78rem; letter-spacing: .1em; color: #e98b84; }"
+    },
+    {
+      "name": "Postmark",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "Signature franking device: red circular SVG cancellation with ring text (NEW DELHI / CHAMBERS / BY APPT.), rotated +8°, ink-grunge mask; stamped over the hero's top-right corner, never used as decoration on plain prose.",
+      "html": "<svg class=\"ds-postmark\" viewBox=\"-90 -90 180 180\" aria-hidden=\"true\"><defs><path id=\"dsPmArc\" d=\"M -58,0 A 58,58 0 0 1 58,0\"/><path id=\"dsPmArcB\" d=\"M -58,0 A 58,58 0 0 0 58,0\"/></defs><circle r=\"82\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\"/><circle r=\"60\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"/><text class=\"ds-pm-text\"><textPath href=\"#dsPmArc\" startOffset=\"50%\" text-anchor=\"middle\">NEW DELHI</textPath></text><text class=\"ds-pm-text\"><textPath href=\"#dsPmArcB\" startOffset=\"50%\" text-anchor=\"middle\">CHAMBERS</textPath></text><text y=\"7\" text-anchor=\"middle\" class=\"ds-pm-mid\">BY APPT.</text></svg>",
+      "css": ".ds-postmark { width: 170px; height: 170px; color: #a8231f; rotate: 8deg; opacity: .85; mask-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence baseFrequency='.5'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .5 .65'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)'/%3E%3C/svg%3E\"); mask-size: cover; } .ds-pm-text { font-family: 'Courier Prime', monospace; font-size: 13px; letter-spacing: 3px; fill: currentColor; } .ds-pm-mid { font-family: 'Courier Prime', monospace; font-size: 16px; font-weight: 700; fill: currentColor; }"
+    },
+    {
+      "name": "Perforated Stamp Card",
+      "kind": "card",
+      "refersTo": "card-stamp",
+      "description": "Partner card as a postage/court-fee stamp: perforated edges, double inner frame, denomination chit, lifted on soft shadow.",
+      "html": "<article class=\"ds-stamp-card\"><span class=\"ds-perf ds-perf-t\"></span><span class=\"ds-perf ds-perf-b\"></span><span class=\"ds-perf ds-perf-l\"></span><span class=\"ds-perf ds-perf-r\"></span><div class=\"ds-stamp-inner\"><p class=\"ds-denom\">40</p><h3>Adv.&nbsp;Vinod&nbsp;Pant</h3><p class=\"ds-stamp-role\">Managing Partner · at the Bar since 2007</p><p class=\"ds-stamp-quals\">B.Com&nbsp;(Hons) &amp; M.Com · LL.B. · MBA · ICWA</p></div></article>",
+      "css": ".ds-stamp-card { position: relative; background: #f1ebdb; box-shadow: 0 10px 30px -14px rgba(34,28,16,.55); max-width: 24rem; } .ds-perf { position: absolute; z-index: 2; } .ds-perf-t { top: -1px; left: 0; right: 0; height: 9px; background: radial-gradient(circle 4.5px at 8px 0, #e0d6ba 98%, transparent) repeat-x left top / 16px 9px; } .ds-perf-b { bottom: -1px; left: 0; right: 0; height: 9px; background: radial-gradient(circle 4.5px at 8px 9px, #e0d6ba 98%, transparent) repeat-x left bottom / 16px 9px; } .ds-perf-l { left: -1px; top: 0; bottom: 0; width: 9px; background: radial-gradient(circle 4.5px at 0 8px, #e0d6ba 98%, transparent) repeat-y left top / 9px 16px; } .ds-perf-r { right: -1px; top: 0; bottom: 0; width: 9px; background: radial-gradient(circle 4.5px at 9px 8px, #e0d6ba 98%, transparent) repeat-y right top / 9px 16px; } .ds-stamp-inner { position: relative; margin: 18px; padding: 1.5rem; border: 1px solid #0e3b2e; outline: 1px solid #0e3b2e; outline-offset: 3px; } .ds-denom { position: absolute; top: .9rem; right: .9rem; margin: 0; font-family: 'Libre Caslon Display', Georgia, serif; font-size: 2rem; line-height: 1; color: #0e3b2e; border: 1px solid #2f6b56; padding: .3rem .5rem; background: #e9e2cf; } .ds-stamp-inner h3 { margin: .5rem 0 0; font-family: 'Libre Caslon Display', Georgia, serif; font-weight: 400; font-size: 1.6rem; text-align: center; color: #092b21; } .ds-stamp-role { font-family: 'Courier Prime', monospace; font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; text-align: center; color: #4c4330; margin: .35rem 0 0; } .ds-stamp-quals { text-align: center; font-family: 'Libre Caslon Text', Georgia, serif; font-size: .92rem; color: #6d551f; margin: .8rem 0 0; padding: .6rem 0; border-top: 1px solid #8a6d2f; border-bottom: 1px solid #8a6d2f; }"
+    },
+    {
+      "name": "Fee Mark",
+      "kind": "chip",
+      "refersTo": "fee-mark",
+      "description": "Court-fee chit flagging a specialisation: gold hairline border, rotated, ink-grunge mask, tack shadow.",
+      "html": "<span class=\"ds-fee-mark\">Specialisation</span>",
+      "css": ".ds-fee-mark { display: inline-block; font-family: 'Courier Prime', monospace; font-size: .62rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #6d551f; border: 1px solid #8a6d2f; padding: .2rem .5rem; rotate: -2deg; background: #f1ebdb; box-shadow: 1px 2px 4px -2px rgba(109,85,31,.5); mask-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence baseFrequency='.55' /%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .45 .72'/%3E%3C/filter%3E%3Crect width='400' height='200' filter='url(%23g)'/%3E%3C/svg%3E\"); mask-size: cover; }"
+    },
+    {
+      "name": "Deed Blank",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "The honest-placeholder pattern: dotted blank line plus red rotated 'to be affixed' mark; the only sanctioned way to show an unknown fact.",
+      "html": "<p class=\"ds-deed-blank\">Chambers&nbsp;: <span class=\"ds-blank-line\">&nbsp;</span> <span class=\"ds-replace-mark\">address to be affixed</span></p>",
+      "css": ".ds-deed-blank { font-family: 'Libre Caslon Text', Georgia, serif; font-size: 1.1rem; color: #221c10; } .ds-blank-line { display: inline-block; min-width: 12rem; font-family: 'Courier Prime', monospace; border-bottom: 1px dotted #4c4330; vertical-align: baseline; color: #4c4330; } .ds-replace-mark { display: inline-block; margin-left: .5rem; vertical-align: .15em; font-family: 'Courier Prime', monospace; font-size: .6rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #a8231f; border: 1px solid #a8231f; padding: .12rem .4rem; rotate: -2deg; opacity: .85; mask-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence baseFrequency='.55' /%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .45 .72'/%3E%3C/filter%3E%3Crect width='400' height='200' filter='url(%23g)'/%3E%3C/svg%3E\"); mask-size: cover; }"
+    },
+    {
+      "name": "Microprint Rule",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "Security rule of repeated firm text at 6px between hairlines; filled at runtime, unselectable; bounds every green zone.",
+      "html": "<p class=\"ds-microprint\" aria-hidden=\"true\">DATT ASSOCIATES · ADVOCATES SOLICITORS CONSULTANTS · NEW DELHI · DATT ASSOCIATES · ADVOCATES SOLICITORS CONSULTANTS · NEW DELHI · DATT ASSOCIATES · ADVOCATES SOLICITORS CONSULTANTS · NEW DELHI · DATT ASSOCIATES · ADVOCATES SOLICITORS CONSULTANTS · NEW DELHI ·</p>",
+      "css": ".ds-microprint { font-family: 'Courier Prime', monospace; font-size: 6px; letter-spacing: .35em; white-space: nowrap; overflow: hidden; user-select: none; color: #2f6b56; opacity: .9; border-top: 1px solid currentColor; border-bottom: 1px solid currentColor; padding: 1px 0; line-height: 1.4; margin: 0; }"
+    },
+    {
+      "name": "Sheet Heading",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "Engraved section heading: uppercase display caps centered between double hairline rules.",
+      "html": "<h2 class=\"ds-sheet-h\">Schedule of Practice</h2>",
+      "css": ".ds-sheet-h { font-family: 'Libre Caslon Display', Georgia, serif; font-weight: 400; font-size: clamp(1.9rem, 4vw, 2.9rem); letter-spacing: .05em; text-transform: uppercase; text-align: center; color: #0e3b2e; display: flex; align-items: center; gap: 1.25rem; justify-content: center; margin: 0; } .ds-sheet-h::before, .ds-sheet-h::after { content: \"\"; height: 5px; flex: 1; max-width: 9rem; border-top: 1px solid #0e3b2e; border-bottom: 1px solid #0e3b2e; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Engraved Instrument",
+    "overview": "The site is not a page about a law firm; it is a document that behaves like the law's own paper — Indian stamp-paper security printing rendered live in the browser. Buff security paper carries a monumental affixed hero stamp with a green engraved interior, guilloche rosettes and lattice bands drawn at runtime as real hypotrochoid and sine curves, microprint rules, perforated stamp frames, a red circular postmark cancellation, and rubber-stamp red endorsements. Every device on the page is a working security-printing device, not a decoration. It deliberately refuses both the navy-gold pillars-and-gavel law-firm template and the sterile legal-tech opposite. Density is documentary: long measure prose in an engraved text face, uppercase engraved headings flanked by double rules, roman-numeral schedules. Authority is carried in green engraving; the human hand arrives in red — stamps, serials, endorsement buttons, the postmark, focus rings — always slightly rotated and masked with ink grunge. Unknown facts are never invented: they appear as dotted deed blanks with red 'to be affixed' marks.",
+    "keyCharacteristics": [
+      "Buff paper ground with fractal-noise grain, laid-line striations, and a soft top-light sheen (all in the body background stack)",
+      "Two-ink discipline: intaglio green for authority, rubber-stamp red for human action",
+      "Runtime-generated guilloche (rosettes, bands, microprint) in currentColor, recolorable by context",
+      "The hero is itself a stamp — a perforated, rotated, postmarked artifact affixed to the paper, not a banner",
+      "Square corners everywhere; depth is paper physics, not UI elevation",
+      "Bilingual masthead: Devanagari co-title above the engraved Latin caps"
+    ],
+    "rules": [
+      { "name": "The Two-Inks Rule", "body": "Green is the state's engraving; red is the human hand. Red appears only on applied acts — stamps, serials, endorsements, the postmark, marks, focus — always in the mono face, usually rotated, never as a background or body-text color.", "section": "colors" },
+      { "name": "The Fourth-Ink Restraint", "body": "Gold is a fee-mark ink: small marks, numerals, hairline rules. It never fills a surface and never carries a heading.", "section": "colors" },
+      { "name": "The Serial Rule", "body": "Every formal document surface carries a mono serial number, format 'No. DA / …' — red at the head of the gate document, a lightened red tint at the bottom-right of the hero stamp.", "section": "typography" },
+      { "name": "The Microprint Rule", "body": "Microprint is real text — the firm's name repeated at 6–7px in the mono face between hairline rules, user-select: none, filled at runtime. It marks the edge of every green zone; it is never an image.", "section": "typography" },
+      { "name": "The No-Hard-Offset Rule", "body": "Every shadow is blurred and usually negative-spread; nothing in this world casts a hard offset shadow.", "section": "elevation" },
+      { "name": "The Working-Curves Rule", "body": "Guilloche is always generated geometry in currentColor — never a raster texture, never an opaque image. New surfaces reuse the [data-rosette] / [data-band] generators.", "section": "shapes" }
+    ],
+    "dos": [
+      "Do generate all guilloche at runtime via [data-rosette] / [data-band] and let currentColor recolor it per context (green on paper, verdigris on green surfaces).",
+      "Do apply the ink-grunge feTurbulence mask and a slight rotation (−1.2° to −2°, postmark +8°) to anything that reads as stamped or affixed.",
+      "Do mark every unknown fact as a deed blank with a red 'to be affixed' mark; never invent an address, number, photo, or credential.",
+      "Do bound every green zone with a microprint rule or lattice band, and keep engraved depth as inset shadow.",
+      "Do honor prefers-reduced-motion (all animation/transition durations collapse to 0.01ms) and keep the red :focus-visible outline (2px, 3px offset)."
+    ],
+    "donts": [
+      "Don't round corners, fill buttons with solid color, or cast hard offset shadows — the world is cut paper and pressed ink.",
+      "Don't use red as a surface or body-text color; it is reserved for applied acts (Two-Inks Rule).",
+      "Don't replace generated curves with raster textures or stock imagery; no photography exists in this world until real portraits are affixed into the engraved frames.",
+      "Don't use superlative or solicitous copy; headings speak in the instrument's register and the BCI gate stays on entry.",
+      "Don't add typefaces beyond the four self-hosted faces; system display faces and icon fonts are outside the world."
+    ]
+  }
+}
