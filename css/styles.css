@@ -310,6 +310,16 @@ h1, h2, h3 { font-family: var(--serif-d); font-weight: 400; line-height: 1.15; t
   position: relative; margin: 18px; padding: clamp(1.25rem, 3vw, 2rem);
   border: 1px solid var(--green); outline: 1px solid var(--green); outline-offset: 3px;
 }
+.court-fee {
+  position: absolute; top: .9rem; right: .9rem; width: 74px;
+  rotate: 2deg; --paper-tint: var(--paper-hi);
+  background: #e7dcb4;
+  padding: 6px;
+  box-shadow: 0 3px 8px -3px rgba(34,28,16,.4);
+}
+.court-fee > svg { display: block; width: 100%; height: auto; color: var(--gold-text); }
+.cf-label { font-family: var(--mono); font-size: 8.5px; font-weight: 700; letter-spacing: 1.6px; fill: currentColor; }
+.cf-value { font-family: var(--mono); font-size: 7px; letter-spacing: 1.2px; fill: currentColor; }
 .portrait {
   width: 132px; margin: 0 auto; text-align: center; color: var(--green-line);
   border: 1px solid color-mix(in srgb, var(--green) 40%, var(--paper-hi));
