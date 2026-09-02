@@ -310,12 +310,6 @@ h1, h2, h3 { font-family: var(--serif-d); font-weight: 400; line-height: 1.15; t
   position: relative; margin: 18px; padding: clamp(1.25rem, 3vw, 2rem);
   border: 1px solid var(--green); outline: 1px solid var(--green); outline-offset: 3px;
 }
-.denom {
-  position: absolute; top: .9rem; right: .9rem;
-  font-family: var(--serif-d); font-size: 2rem; line-height: 1;
-  color: var(--green); border: 1px solid var(--green-line); padding: .3rem .5rem;
-  background: var(--paper);
-}
 .portrait {
   width: 132px; margin: 0 auto; text-align: center; color: var(--green-line);
   border: 1px solid color-mix(in srgb, var(--green) 40%, var(--paper-hi));
