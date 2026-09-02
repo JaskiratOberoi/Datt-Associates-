@@ -32,7 +32,7 @@ Indian litigation practice: appearances at all Delhi district courts, the Delhi 
 - Managing Director: Adv. Vinod Pant — B.Com (Hons) and M.Com, Delhi University; LLB, Delhi University; MBA; ICWA. 40+ years of corporate experience with groups such as Usha and Sriram before practice. Practising as an advocate since 2007. Enrolment No. D/668/2007. Contact +91 93136 33143.
 - Partner: Ms. Amrit Arora — B.Com, Delhi University; Company Secretary (CS); LLB (2024). Enrolment No. D/15764/2025. Contact +91 88262 81685.
 - Chambers: Chamber No. 500–501, Western Wing, Tis Hazari Court, New Delhi – 110054. Office: F-302, 3rd Floor, Aditya Complex, Plot No. 6, Sector 10 Market, Dwarka, New Delhi – 110075. (User-provided 2026-09-02.)
-- UNDECIDED / PLACEHOLDER: firm email address, partner photographs, firm founding year. Ship clearly marked placeholders; user will replace (user-confirmed).
+- Firm email: consult@dattassociates.com (user-provided 2026-09-02). UNDECIDED / PLACEHOLDER: partner photographs, firm founding year. Ship clearly marked placeholders; user will replace (user-confirmed).
 - Compliance (user-confirmed): Bar Council of India rules — site must be informational, not solicitation; no superlative "best lawyer" claims; include the standard BCI disclaimer/consent notice on entry.
 
 ## Brand Commitments
