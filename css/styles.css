@@ -311,15 +311,25 @@ h1, h2, h3 { font-family: var(--serif-d); font-weight: 400; line-height: 1.15; t
   border: 1px solid var(--green); outline: 1px solid var(--green); outline-offset: 3px;
 }
 .court-fee {
-  position: absolute; top: .9rem; right: .9rem; width: 74px;
+  position: absolute; top: .9rem; right: .9rem; width: 66px;
   rotate: 2deg; --paper-tint: var(--paper-hi);
-  background: #e7dcb4;
-  padding: 6px;
-  box-shadow: 0 3px 8px -3px rgba(34,28,16,.4);
+  background: #efe5ba;
+  padding: 3px;
+  box-shadow: 0 2px 5px -2px rgba(34,28,16,.4);
 }
-.court-fee > svg { display: block; width: 100%; height: auto; color: var(--gold-text); }
-.cf-label { font-family: var(--mono); font-size: 8.5px; font-weight: 700; letter-spacing: 1.6px; fill: currentColor; }
-.cf-value { font-family: var(--mono); font-size: 7px; letter-spacing: 1.2px; fill: currentColor; }
+.court-fee .perf span:nth-child(1) { height: 5px;
+  background: radial-gradient(circle 2.5px at 4px 0, var(--paper-tint) 98%, transparent) repeat-x left top / 8px 5px; }
+.court-fee .perf span:nth-child(2) { height: 5px;
+  background: radial-gradient(circle 2.5px at 4px 5px, var(--paper-tint) 98%, transparent) repeat-x left bottom / 8px 5px; }
+.court-fee .perf span:nth-child(3) { width: 5px;
+  background: radial-gradient(circle 2.5px at 0 4px, var(--paper-tint) 98%, transparent) repeat-y left top / 5px 8px; }
+.court-fee .perf span:nth-child(4) { width: 5px;
+  background: radial-gradient(circle 2.5px at 5px 4px, var(--paper-tint) 98%, transparent) repeat-y right top / 5px 8px; }
+.court-fee > svg { display: block; width: 100%; height: auto; color: var(--red); opacity: .9; }
+.cf-label { font-family: var(--mono); font-size: 8px; font-weight: 700; letter-spacing: .8px; fill: currentColor; }
+.cf-value { font-family: var(--mono); font-size: 6.5px; letter-spacing: .4px; fill: currentColor; }
+.cf-corner { font-family: var(--mono); font-size: 7px; font-weight: 700; fill: currentColor; }
+.cf-hindi { font-family: var(--hindi); font-size: 7px; font-weight: 600; fill: currentColor; }
 .portrait {
   width: 132px; margin: 0 auto; text-align: center; color: var(--green-line);
   border: 1px solid color-mix(in srgb, var(--green) 40%, var(--paper-hi));
