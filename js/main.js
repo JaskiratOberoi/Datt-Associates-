@@ -86,7 +86,7 @@
   document.querySelectorAll("[data-band]").forEach(band);
 
   /* ── microprint rules ─────────────────────────────────────── */
-  var MICRO = "DATT ASSOCIATES · ADVOCATES SOLICITORS CONSULTANTS · NEW DELHI · ";
+  var MICRO = "DATT & ASSOCIATES · ADVOCATES SOLICITORS CONSULTANTS · NEW DELHI · ";
   document.querySelectorAll(".microprint").forEach(function (el) {
     el.textContent = MICRO.repeat(24);
   });

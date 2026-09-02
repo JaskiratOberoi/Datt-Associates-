@@ -1,0 +1,969 @@
+<title>Datt Associates</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Courier+Prime:wght@400;700&family=Noto+Serif+Devanagari:wght@500;600&display=swap">
+<style>
+/* ═══════════════════════════════════════════════════════════════
+   DATT ASSOCIATES — engraved legal instrument
+   world: Indian stamp-paper security printing (seed 9ecdd516)
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  --paper:      #e9e2cf;
+  --paper-hi:   #f1ebdb;
+  --paper-tint: #e0d6ba;
+  --ink:        #221c10;
+  --ink-soft:   #4c4330;
+  --green:      #0e3b2e;
+  --green-deep: #092b21;
+  --green-line: #2f6b56;
+  --on-green:   #e7e0cb;
+  --on-green-2: #a8c2b2;
+  --red:        #a8231f;
+  --red-hi:     #bf2b24;
+  --gold:       #8a6d2f;
+  --gold-text:  #6d551f;
+  --serif-d: "Libre Caslon Display", Georgia, "Times New Roman", serif;
+  --serif-t: "Libre Caslon Text", Georgia, "Times New Roman", serif;
+  --mono:    "Courier Prime", "Courier New", monospace;
+  --hindi:   "Noto Serif Devanagari", "Libre Caslon Text", serif;
+  --gutter: clamp(1rem, 4vw, 3rem);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; overflow-x: clip; }
+
+body {
+  font-family: var(--serif-t);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--ink);
+  overflow-x: clip;
+  background-color: var(--paper);
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 .13 0 0 0 0 .11 0 0 0 0 .06 0 0 0 .06 0'/%3E%3C/filter%3E%3Crect width='240' height='240' filter='url(%23n)'/%3E%3C/svg%3E"),
+    repeating-linear-gradient(0deg, rgba(34,28,16,.028) 0 1px, transparent 1px 4px),
+    radial-gradient(ellipse at 30% 10%, rgba(255,252,240,.5), transparent 60%);
+  caret-color: var(--red);
+}
+
+/* ── browser surfaces ─────────────────────────────── */
+::selection { background: var(--green); color: var(--paper); }
+:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; border-radius: 1px; }
+html { scrollbar-color: var(--green) var(--paper-tint); scrollbar-width: thin; }
+body::-webkit-scrollbar { width: 10px; }
+body::-webkit-scrollbar-track { background: var(--paper-tint); }
+body::-webkit-scrollbar-thumb { background: var(--green); border: 2px solid var(--paper-tint); }
+a { color: var(--green); text-decoration-color: var(--gold); text-underline-offset: 3px; text-decoration-thickness: 1px; }
+a:hover { color: var(--green-deep); text-decoration-color: var(--red); }
+
+.skip-link {
+  position: absolute; left: -999px; top: 0; z-index: 99;
+  background: var(--green); color: var(--on-green);
+  padding: .6rem 1.2rem; font-family: var(--mono);
+}
+.skip-link:focus { left: 0; }
+
+h1, h2, h3 { font-family: var(--serif-d); font-weight: 400; line-height: 1.15; text-wrap: balance; }
+
+/* ── microprint (security rule) ───────────────────── */
+.microprint {
+  font-family: var(--mono); font-size: 6px; letter-spacing: .35em;
+  white-space: nowrap; overflow: hidden; user-select: none;
+  color: var(--green-line); opacity: .9;
+  border-top: 1px solid currentColor; border-bottom: 1px solid currentColor;
+  padding: 1px 0; line-height: 1.4;
+}
+.microprint-onink { color: var(--on-green-2); opacity: .55; font-size: 7px; letter-spacing: .18em; }
+
+/* ═══════════ GATE ═══════════ */
+.gate {
+  position: fixed; inset: 0; z-index: 50;
+  display: flex; align-items: center; justify-content: center;
+  padding: var(--gutter);
+  background: rgba(9, 32, 25, .82);
+  backdrop-filter: blur(3px);
+  transition: opacity .5s ease, visibility .5s;
+}
+.gate[hidden] { display: none; }
+.gate.lifting { opacity: 0; visibility: hidden; }
+.gate-doc {
+  position: relative; overflow: hidden;
+  max-width: 34rem; max-height: 90vh; overflow-y: auto;
+  background: var(--paper-hi);
+  padding: clamp(1.5rem, 4vw, 2.75rem);
+  box-shadow: 0 18px 50px -12px rgba(0,0,0,.55);
+  text-align: center;
+}
+.gate-border {
+  position: absolute; inset: 8px; pointer-events: none;
+  border: 1px solid var(--green);
+  outline: 3px double var(--green);
+  outline-offset: 3px;
+}
+.gate-serial { font-family: var(--mono); color: var(--red); font-size: .8rem; text-align: right; }
+.gate-rosette { width: 76px; height: 76px; color: var(--green); margin: .25rem auto 0; }
+.gate-doc h2 { font-size: 1.75rem; letter-spacing: .04em; margin-top: .5rem; text-transform: uppercase; }
+.gate-rule-word {
+  font-family: var(--mono); font-size: .72rem; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--ink-soft); margin: .35rem 0 1.25rem;
+  border-bottom: 1px solid var(--green); display: inline-block; padding-bottom: .35rem;
+}
+.gate-doc p, .gate-doc ol { text-align: left; font-size: .95rem; margin-bottom: .9rem; }
+.gate-doc ol { padding-left: 1.4rem; }
+.gate-doc li { margin-bottom: .45rem; }
+.gate-doc li::marker { font-family: var(--mono); color: var(--red); }
+
+.gate-stamp {
+  position: absolute; left: 50%; top: 42%;
+  translate: -50% -50%; rotate: -9deg;
+  font-family: var(--mono); font-weight: 700; font-size: 2rem; line-height: 1.05;
+  text-transform: uppercase; letter-spacing: .08em; text-align: center;
+  color: var(--red-hi);
+  border: 4px double var(--red-hi); padding: .5rem 1.1rem;
+  opacity: 0; pointer-events: none;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence baseFrequency='.55' /%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .9 .05'/%3E%3C/filter%3E%3Crect width='400' height='200' filter='url(%23g)'/%3E%3C/svg%3E");
+  mask-size: cover;
+}
+.gate.stamped .gate-stamp { animation: slam .38s cubic-bezier(.19,1,.22,1) forwards; }
+@keyframes slam {
+  0%   { opacity: 0; scale: 2.1; }
+  55%  { opacity: 1; scale: .96; }
+  100% { opacity: 1; scale: 1; }
+}
+
+/* ═══════════ STAMP BUTTONS ═══════════ */
+.stamp-btn, .stamp-cta, .replace-mark, .fee-mark, .portrait-note {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence baseFrequency='.55' /%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .45 .72'/%3E%3C/filter%3E%3Crect width='400' height='200' filter='url(%23g)'/%3E%3C/svg%3E");
+  mask-size: cover;
+}
+.stamp-btn, .stamp-cta {
+  display: inline-block; cursor: pointer;
+  font-family: var(--mono); font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--red); background: transparent; text-align: center; text-decoration: none;
+  border: 3px double var(--red); padding: .8rem 1.6rem;
+  rotate: -1.5deg;
+  transition: rotate .18s ease, color .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+.stamp-btn { font-size: 1rem; margin-top: .25rem; }
+.stamp-cta { font-size: clamp(1.05rem, 1.8vw, 1.35rem); line-height: 1.3; padding: 1rem 2rem; }
+.stamp-btn:hover, .stamp-cta:hover {
+  rotate: 0deg; color: var(--red-hi); border-color: var(--red-hi);
+  box-shadow: 0 6px 18px -6px rgba(168,35,31,.45);
+}
+.stamp-btn:active, .stamp-cta:active { translate: 0 1px; }
+
+/* ═══════════ DOCKET NAV ═══════════ */
+.docket {
+  position: sticky; top: 0; z-index: 20;
+  display: flex; align-items: baseline; justify-content: space-between; gap: 1rem;
+  padding: .55rem var(--gutter);
+  background: color-mix(in srgb, var(--paper-hi) 92%, transparent);
+  backdrop-filter: blur(6px);
+  border-bottom: 2px solid var(--green);
+  box-shadow: 0 1px 0 var(--paper-hi), 0 6px 16px -12px rgba(34,28,16,.5);
+}
+.docket-name {
+  font-family: var(--serif-d); font-size: 1.05rem; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--green);
+}
+.docket ul { display: flex; gap: clamp(.75rem, 2.5vw, 1.75rem); list-style: none; flex-wrap: wrap; }
+.docket a {
+  font-family: var(--mono); font-size: .82rem; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--ink-soft); text-decoration: none; border-bottom: 1px solid transparent; padding-bottom: 2px;
+}
+.docket a:hover { color: var(--red); border-bottom-color: var(--red); }
+
+/* ═══════════ HERO: AFFIXED STAMP ═══════════ */
+.affix-wrap {
+  padding: clamp(2.25rem, 4.5vw, 3.75rem) var(--gutter) 0;
+  display: grid; justify-items: center;
+}
+.mega-stamp {
+  position: relative; width: min(940px, 100%); rotate: -1.2deg;
+  background: var(--paper-hi); --paper-tint: var(--paper);
+  filter: drop-shadow(0 18px 34px rgba(34,28,16,.35));
+}
+.mega-stamp .stamp-inner {
+  margin: 20px; padding: 2.5rem 2rem 2.9rem;
+  background: linear-gradient(165deg, var(--green) 0%, var(--green-deep) 100%);
+  color: var(--on-green); text-align: center;
+  border: none; outline: 2px solid var(--on-green-2); outline-offset: -12px;
+  box-shadow: inset 0 0 50px rgba(0,0,0,.35);
+}
+.mega-corner {
+  position: absolute; z-index: 1; font-family: var(--serif-d); font-size: 1.5rem; color: var(--on-green);
+  border: 1px solid var(--on-green-2); padding: .25rem .6rem; background: rgba(9,43,34,.5);
+}
+.mega-corner.tl { top: 34px; left: 34px; }
+.mega-corner.tr { top: 34px; right: 34px; font-family: var(--hindi); }
+.rosette-main { width: clamp(110px, 12vw, 140px); height: auto; color: var(--on-green-2); margin: 0 auto; display: block; }
+.mega-hindi { font-family: var(--hindi); font-weight: 600; font-size: clamp(1rem, 2vw, 1.25rem); letter-spacing: .12em; color: var(--on-green-2); margin-top: .9rem; }
+.mega-name {
+  font-size: clamp(1.9rem, 5.4vw, 4.4rem);
+  letter-spacing: .06em; text-transform: uppercase;
+  margin-top: .2rem; color: var(--on-green);
+}
+.mega-role {
+  font-family: var(--mono); font-size: clamp(.78rem, 1.3vw, .92rem); letter-spacing: .22em; text-transform: uppercase;
+  color: var(--on-green-2); margin-top: .7rem;
+}
+.mega-hook {
+  font-style: italic; font-size: clamp(1rem, 1.6vw, 1.15rem); line-height: 1.55;
+  max-width: 46ch; margin: 1.1rem auto 0; color: var(--on-green);
+}
+.mega-serial {
+  position: absolute; right: 1.1rem; bottom: .7rem;
+  font-family: var(--mono); font-weight: 700; font-size: .78rem; letter-spacing: .1em;
+  color: #e98b84;
+}
+.postmark {
+  position: absolute; z-index: 2; right: -64px; top: -46px; width: 170px; height: 170px; color: var(--red);
+  rotate: 8deg; opacity: .85;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence baseFrequency='.5'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .5 .65'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)'/%3E%3C/svg%3E");
+  mask-size: cover;
+}
+.pm-text { font-family: var(--mono); font-size: 13px; letter-spacing: 3px; fill: currentColor; }
+.pm-mid { font-family: var(--mono); font-size: 16px; font-weight: 700; fill: currentColor; }
+
+.endorsement {
+  display: flex; align-items: center; justify-content: center; gap: clamp(1.25rem, 4vw, 3rem);
+  flex-wrap: wrap;
+  padding: clamp(1.5rem, 3.5vw, 2.5rem) 0;
+}
+.endorse-note { max-width: 34ch; }
+.endorse-note p { font-size: .95rem; color: var(--ink-soft); margin-bottom: .35rem; }
+.quiet-link { font-family: var(--mono); font-size: .85rem; letter-spacing: .06em; }
+
+/* ═══════════ SHEETS (paper sections) ═══════════ */
+.sheet { position: relative; z-index: 0; padding: clamp(3rem, 7vw, 5.5rem) var(--gutter); max-width: 72rem; margin: 0 auto; }
+.watermark {
+  position: absolute; inset: 0; margin: auto; z-index: -1;
+  width: min(72vw, 32rem); height: min(72vw, 32rem);
+  color: var(--green); opacity: .055; pointer-events: none;
+}
+.sheet-tint {
+  max-width: none;
+  background: var(--paper-tint);
+  border-top: 1px solid var(--gold);
+  border-bottom: 1px solid var(--gold);
+}
+.sheet-tint > * { max-width: 72rem; margin-left: auto; margin-right: auto; }
+
+.sheet-h {
+  font-size: clamp(1.9rem, 4vw, 2.9rem); letter-spacing: .05em; text-transform: uppercase;
+  text-align: center; color: var(--green);
+  display: flex; align-items: center; gap: 1.25rem; justify-content: center;
+}
+.sheet-h::before, .sheet-h::after {
+  content: ""; height: 5px; flex: 1; max-width: 9rem;
+  border-top: 1px solid var(--green); border-bottom: 1px solid var(--green);
+}
+.sheet-intro { text-align: center; font-style: italic; color: var(--ink-soft); margin: 1rem auto 0; max-width: 55ch; }
+
+/* ── schedule ─────────────────────────────────────── */
+.schedule { margin-top: clamp(2rem, 5vw, 3.5rem); border-top: 3px double var(--green); }
+.row {
+  display: grid; grid-template-columns: 4rem 1fr 15rem; gap: 1.25rem;
+  padding: 1.6rem .75rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--green) 35%, var(--paper));
+  transition: background-color .2s ease;
+}
+.row:last-child { border-bottom: 3px double var(--green); }
+.row:hover { background: var(--paper-hi); }
+.row-index {
+  font-family: var(--serif-d); font-size: 1.9rem; color: var(--gold-text);
+  text-align: center; line-height: 1; padding-top: .2rem;
+}
+.row-body h3 { font-size: 1.45rem; color: var(--green-deep); }
+.row-body p { margin-top: .5rem; max-width: 62ch; color: var(--ink); }
+.row-forum {
+  font-family: var(--mono); font-size: .78rem; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--ink-soft); text-align: right; padding-top: .45rem; line-height: 1.9;
+}
+.fee-mark {
+  display: inline-block; vertical-align: .35em; margin-left: .6rem;
+  font-family: var(--mono); font-size: .62rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--gold-text); border: 1px solid var(--gold); padding: .2rem .5rem;
+  rotate: -2deg; background: var(--paper-hi);
+  box-shadow: 1px 2px 4px -2px rgba(109,85,31,.5);
+}
+
+/* ── partners: perforated stamps ──────────────────── */
+.partners {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr));
+  gap: clamp(1.5rem, 4vw, 3rem); margin-top: clamp(2rem, 5vw, 3.5rem);
+}
+.stamp-card {
+  position: relative; background: var(--paper-hi);
+  box-shadow: 0 10px 30px -14px rgba(34,28,16,.55);
+}
+.perf span { position: absolute; z-index: 2; }
+.perf span:nth-child(1) { top: -1px; left: 0; right: 0; height: 9px;
+  background: radial-gradient(circle 4.5px at 8px 0, var(--paper-tint) 98%, transparent) repeat-x left top / 16px 9px; }
+.perf span:nth-child(2) { bottom: -1px; left: 0; right: 0; height: 9px;
+  background: radial-gradient(circle 4.5px at 8px 9px, var(--paper-tint) 98%, transparent) repeat-x left bottom / 16px 9px; }
+.perf span:nth-child(3) { left: -1px; top: 0; bottom: 0; width: 9px;
+  background: radial-gradient(circle 4.5px at 0 8px, var(--paper-tint) 98%, transparent) repeat-y left top / 9px 16px; }
+.perf span:nth-child(4) { right: -1px; top: 0; bottom: 0; width: 9px;
+  background: radial-gradient(circle 4.5px at 9px 8px, var(--paper-tint) 98%, transparent) repeat-y right top / 9px 16px; }
+.stamp-inner {
+  position: relative; margin: 18px; padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid var(--green); outline: 1px solid var(--green); outline-offset: 3px;
+}
+.denom {
+  position: absolute; top: .9rem; right: .9rem;
+  font-family: var(--serif-d); font-size: 2rem; line-height: 1;
+  color: var(--green); border: 1px solid var(--green-line); padding: .3rem .5rem;
+  background: var(--paper);
+}
+.portrait {
+  width: 132px; margin: 0 auto; text-align: center; color: var(--green-line);
+  border: 1px solid color-mix(in srgb, var(--green) 40%, var(--paper-hi));
+  padding: .6rem .6rem .4rem;
+  background: repeating-linear-gradient(0deg, rgba(14,59,46,.05) 0 1px, transparent 1px 3px);
+}
+.portrait svg { width: 100%; height: auto; display: block; }
+.portrait-note { font-family: var(--mono); font-size: .58rem; letter-spacing: .16em; text-transform: uppercase; color: var(--red); margin-top: .4rem; }
+.stamp-inner h3 { font-size: 1.6rem; text-align: center; margin-top: 1.1rem; color: var(--green-deep); }
+.stamp-role { font-family: var(--mono); font-size: .78rem; letter-spacing: .14em; text-transform: uppercase; text-align: center; color: var(--ink-soft); margin-top: .35rem; }
+.stamp-quals {
+  text-align: center; font-size: .92rem; color: var(--gold-text); margin-top: .8rem;
+  padding: .6rem 0; border-top: 1px solid var(--gold); border-bottom: 1px solid var(--gold);
+}
+.stamp-bio { margin-top: 1rem; font-size: .98rem; max-width: 52ch; margin-inline: auto; }
+.stamp-bio strong { color: var(--green-deep); }
+.stamp-card .deed-blank { margin-top: 1.1rem; text-align: center; }
+
+/* ── deed blanks ──────────────────────────────────── */
+.deed-blank { font-size: 1rem; }
+.blank-line {
+  display: inline-block; min-width: min(9rem, 34vw); font-family: var(--mono);
+  border-bottom: 1px dotted var(--ink-soft); vertical-align: baseline;
+  color: var(--ink-soft); overflow: hidden; max-width: 100%;
+}
+.blank-wide { min-width: min(16rem, 44vw); }
+.exec-fields .deed-blank {
+  display: flex; flex-wrap: wrap; align-items: baseline;
+  column-gap: .5rem; row-gap: .3rem;
+}
+.exec-fields .blank-line { flex: 1 1 8rem; }
+.replace-mark {
+  display: inline-block; margin-left: .5rem; vertical-align: .15em;
+  font-family: var(--mono); font-size: .6rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--red); border: 1px solid var(--red); padding: .12rem .4rem; rotate: -2deg;
+  opacity: .85;
+}
+.deed-set { font-style: italic; }
+.deed-filled {
+  font-family: var(--mono); font-size: .93em; color: var(--green-deep);
+  border-bottom: 1px dotted var(--ink-soft); padding-bottom: 1px;
+}
+.deed-filled a { font-family: inherit; color: var(--green-deep); text-decoration: none; }
+.deed-filled a:hover { color: var(--red); }
+.tel-who {
+  font-size: .64rem; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--ink-soft); margin: 0 .5rem 0 .2rem;
+}
+
+/* ═══════════ LEDGER (green forums section) ═══════════ */
+.ledger {
+  background: linear-gradient(180deg, var(--green) 0%, var(--green-deep) 100%);
+  color: var(--on-green);
+  padding: 0 var(--gutter) clamp(3rem, 7vw, 5.5rem);
+  box-shadow: inset 0 20px 40px -30px rgba(0,0,0,.6);
+}
+.ledger .microprint { margin: 0 calc(-1 * var(--gutter)) clamp(2.5rem, 6vw, 4.5rem); }
+.ledger-h {
+  font-size: clamp(1.9rem, 4vw, 2.9rem); letter-spacing: .05em; text-transform: uppercase;
+  text-align: center; color: var(--on-green);
+}
+.ledger-intro { text-align: center; font-style: italic; color: var(--on-green-2); margin: 1rem auto 0; max-width: 52ch; }
+.ladders {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
+  gap: clamp(2rem, 5vw, 4rem); max-width: 66rem; margin: clamp(2.5rem, 5vw, 4rem) auto 0;
+}
+.ladder h3 {
+  font-size: 1.3rem; letter-spacing: .12em; text-transform: uppercase; text-align: center;
+  color: var(--on-green-2); padding-bottom: .8rem; margin-bottom: 1.6rem;
+  border-bottom: 1px solid var(--green-line);
+}
+.ladder ol { list-style: none; position: relative; }
+.tier {
+  position: relative; text-align: center;
+  border: 1px solid var(--on-green-2); padding: 1.1rem 1.25rem;
+  background: rgba(9,43,34,.45);
+}
+.tier + .tier { margin-top: 2.2rem; }
+.tier + .tier::before {
+  content: ""; position: absolute; left: 50%; top: -2.2rem; height: 2.2rem;
+  border-left: 1px dashed var(--on-green-2);
+}
+.tier-3 { outline: 1px solid var(--on-green-2); outline-offset: 4px; padding: 1.5rem 1.25rem; }
+.tier-3 .tier-name { font-size: 1.35rem; }
+.tier-name { font-family: var(--serif-d); font-size: 1.15rem; color: var(--on-green); }
+.tier-amp { display: block; font-family: var(--mono); font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--on-green-2); margin-top: .3rem; }
+.tier-note { font-size: .88rem; font-style: italic; color: var(--on-green-2); margin-top: .45rem; }
+
+/* ── clauses ──────────────────────────────────────── */
+.clauses { max-width: 46rem; margin: clamp(2rem, 5vw, 3.5rem) auto 0; }
+.clause { padding: 1.5rem 0; border-bottom: 1px solid color-mix(in srgb, var(--green) 30%, var(--paper)); }
+.clause:first-child { border-top: 3px double var(--green); }
+.clause:last-child { border-bottom: 3px double var(--green); }
+.clause h3 { font-size: 1.3rem; color: var(--green-deep); }
+.clause-no { font-style: italic; color: var(--gold-text); font-family: var(--serif-t); font-size: 1.05rem; margin-right: .35rem; }
+.clause p { margin-top: .5rem; max-width: 65ch; }
+
+/* ── execution / contact ──────────────────────────── */
+.execution {
+  display: grid; grid-template-columns: 1fr auto; gap: clamp(2rem, 5vw, 4rem);
+  align-items: center; margin-top: clamp(2rem, 5vw, 3.5rem);
+}
+.exec-fields .deed-blank { margin-bottom: 1.2rem; font-size: 1.1rem; }
+.exec-note { font-size: .92rem; font-style: italic; color: var(--ink-soft); max-width: 48ch; margin-top: 1.6rem; }
+.seal-block { text-align: center; }
+.seal { width: clamp(150px, 18vw, 200px); height: auto; color: var(--green); opacity: .85;
+  filter: drop-shadow(0 2px 3px rgba(34,28,16,.25)); }
+.seal-text { font-family: var(--mono); font-size: 11.5px; letter-spacing: 2.5px; fill: currentColor; }
+.seal-mono { font-family: var(--serif-d); font-size: 34px; fill: currentColor; }
+.seal-caption { font-family: var(--mono); font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft); margin-top: .6rem; }
+
+/* ═══════════ COLOPHON ═══════════ */
+.colophon { background: linear-gradient(180deg, var(--green-deep), var(--green) 30%); color: var(--on-green); margin-top: clamp(2rem, 5vw, 4rem); }
+.colophon .band { display: block; width: 100%; height: 40px; color: var(--on-green-2); }
+.colophon-body { max-width: 62rem; margin: 0 auto; padding: clamp(2rem, 5vw, 3.5rem) var(--gutter); text-align: center; }
+.colophon-name { font-family: var(--serif-d); font-size: 1.5rem; letter-spacing: .14em; text-transform: uppercase; }
+.colophon-disclaimer { font-size: .88rem; line-height: 1.7; color: var(--on-green-2); max-width: 72ch; margin: 1.2rem auto 0; }
+.colophon-fine { font-family: var(--mono); font-size: .75rem; letter-spacing: .06em; color: var(--on-green-2); margin-top: 1.5rem; }
+.colophon a { color: var(--on-green); text-decoration-color: var(--on-green-2); }
+.colophon a:hover { color: #fff; }
+
+/* ═══════════ RESPONSIVE ═══════════ */
+@media (max-width: 900px) {
+  .row { grid-template-columns: 3rem 1fr; }
+  .row-forum { grid-column: 2; text-align: left; padding-top: 0; }
+  .execution { grid-template-columns: 1fr; }
+  .seal-block { order: -1; }
+}
+@media (max-width: 640px) {
+  body { font-size: 1rem; }
+  .affix-wrap { padding-top: 1.75rem; }
+  .docket { flex-direction: column; gap: .25rem; align-items: center; padding-bottom: .4rem; }
+  .docket ul { justify-content: center; column-gap: .75rem; }
+  .docket a { font-size: .72rem; letter-spacing: .08em; }
+  .mega-name { letter-spacing: .04em; }
+  .rosette-main { width: 96px; }
+  .mega-stamp .stamp-inner { margin: 14px; padding: 1.9rem 1rem 2.4rem; }
+  .mega-corner { font-size: 1.05rem; }
+  .mega-corner.tl { top: 24px; left: 24px; }
+  .mega-corner.tr { top: 24px; right: 24px; }
+  .mega-serial { right: .8rem; bottom: .5rem; font-size: .68rem; }
+  .mega-role { font-size: .64rem; letter-spacing: .14em; }
+  .postmark { right: -6px; top: -34px; width: 108px; height: 108px; }
+  .endorsement { flex-direction: column; text-align: center; }
+  .endorse-note { max-width: 40ch; }
+  .row { grid-template-columns: 2.4rem 1fr; gap: .9rem; padding-inline: .25rem; }
+  .row-index { font-size: 1.4rem; }
+  .fee-mark { display: block; width: fit-content; margin: .5rem 0 0; vertical-align: baseline; }
+  .replace-mark { margin-left: 0; margin-top: .3rem; display: inline-block; }
+  .blank-wide { min-width: 10rem; }
+  .sheet-h { gap: .7rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+</style>
+
+<!--
+THESIS: The firm's site is an engraved Indian legal instrument — stamp-paper security
+printing carrying verifiable pedigree — refusing the navy-gold pillars-and-gavel
+law-firm template and its sterile legal-tech opposite.
+OWN-WORLD: Buff security paper; intaglio green plates; guilloche rosettes and lattice
+bands generated as working curves; rubber-stamp red endorsements; court-fee gold marks;
+red mono serial numbers; microprint rules; perforated stamp frames; deed-blank
+placeholders. Caslon engraved caps, Courier Prime serials, Devanagari co-title.
+STORY: A distressed litigant lands on a document that looks like the law itself,
+reads exactly what the firm handles and who argues it, believes the specifics,
+and calls for a consultation.
+FIRST VIEWPORT: One monumental perforated stamp affixed to the sheet at -1.2deg —
+green engraved interior with rosette, bilingual firm name, hook line, corner marks —
+cancelled by a red circular NEW DELHI postmark; below it the red stamped
+REQUEST A CONSULTATION endorsement, then the partner stamps.
+FORM: Stamp Paper Engraving — grounded candidate 4 of 7, seed key 9ecdd516.
+COMP: .impeccable/mocks/comp3-affixed-stamp.png approved 2026-08-31 (code-rendered).
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish
+review, the verdict, and DESIGN.md
+-->
+
+<a class="skip-link" href="#partners">Skip to content</a>
+
+<!-- ══════════ BCI DISCLAIMER GATE ══════════ -->
+<div class="gate" id="gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+  <div class="gate-doc">
+    <div class="gate-border" aria-hidden="true"></div>
+    <p class="gate-serial">No.&nbsp;DA&#8202;/&#8202;WEB&#8202;/&#8202;01</p>
+    <svg class="gate-rosette" data-rosette="small" viewBox="-60 -60 120 120" aria-hidden="true"></svg>
+    <h2 id="gate-title">Disclaimer &amp; Declaration</h2>
+    <p class="gate-rule-word" aria-hidden="true">As required by the Bar Council of India</p>
+    <p>The Bar Council of India does not permit advocates to advertise or solicit
+    work in any form or manner. This website exists only to provide basic
+    information about Datt&nbsp;Associates to those who seek it of their own accord.</p>
+    <p>By proceeding, the visitor acknowledges and declares that —</p>
+    <ol>
+      <li>they wish to know more about Datt&nbsp;Associates for their own information and use;</li>
+      <li>there has been no advertisement, solicitation, invitation or inducement of any kind from the firm or any of its members;</li>
+      <li>nothing on this website shall be construed as legal advice, and no advocate–client relationship arises from viewing it.</li>
+    </ol>
+    <button class="stamp-btn" id="gate-agree" type="button">I&nbsp;Agree&nbsp;&amp;&nbsp;Proceed</button>
+    <div class="gate-stamp" id="gate-stamp" aria-hidden="true">Agreed<br>&amp; Admitted</div>
+  </div>
+</div>
+
+<!-- ══════════ DOCKET NAV ══════════ -->
+<nav class="docket" aria-label="Site">
+  <p class="docket-name">Datt&nbsp;Associates</p>
+  <ul>
+    <li><a href="#partners">Partners</a></li>
+    <li><a href="#practice">Practice</a></li>
+    <li><a href="#forums">Forums</a></li>
+    <li><a href="#procedure">Procedure</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<main>
+<!-- ══════════ HERO: THE AFFIXED STAMP ══════════ -->
+<header class="affix-wrap">
+  <div class="mega-stamp">
+    <div class="perf" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+    <p class="mega-corner tl" aria-hidden="true">DA</p>
+    <p class="mega-corner tr" lang="hi" aria-hidden="true">दत्त</p>
+    <div class="stamp-inner">
+      <svg class="rosette-main" data-rosette="main" viewBox="-110 -110 220 220" role="img" aria-label="Engraved guilloche rosette"></svg>
+      <p class="mega-hindi" lang="hi">दत्त एसोसिएट्स</p>
+      <h1 class="mega-name">Datt Associates</h1>
+      <p class="mega-role">Advocates&nbsp;·&nbsp;Solicitors&nbsp;·&nbsp;Consultants</p>
+      <p class="mega-hook">Counsel in civil, criminal, matrimonial &amp; consumer matters —
+      from the district courts of Delhi and other states to the Supreme&nbsp;Court of&nbsp;India.</p>
+      <p class="mega-serial">No.&nbsp;DA&#8201;74&#8201;4952</p>
+    </div>
+    <svg class="postmark" viewBox="-90 -90 180 180" aria-hidden="true">
+      <defs><path id="pmArc" d="M -58,0 A 58,58 0 0 1 58,0"/><path id="pmArcB" d="M -58,0 A 58,58 0 0 0 58,0"/></defs>
+      <circle r="82" fill="none" stroke="currentColor" stroke-width="3"/>
+      <circle r="60" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <text class="pm-text"><textPath href="#pmArc" startOffset="50%" text-anchor="middle">NEW DELHI</textPath></text>
+      <text class="pm-text"><textPath href="#pmArcB" startOffset="50%" text-anchor="middle">CHAMBERS</textPath></text>
+      <text y="7" text-anchor="middle" class="pm-mid">BY APPT.</text>
+    </svg>
+  </div>
+  <div class="endorsement">
+    <a class="stamp-cta" href="#contact">Request a<br>Consultation</a>
+    <div class="endorse-note">
+      <p>Consultations by appointment at the firm's chambers, New Delhi.</p>
+      <a class="quiet-link" href="#practice">Read the schedule of practice ↓</a>
+    </div>
+  </div>
+</header>
+
+<!-- ══════════ THE PARTNERS ══════════ -->
+<section class="sheet sheet-tint" id="partners" aria-labelledby="partners-h">
+  <h2 id="partners-h" class="sheet-h">The Partners</h2>
+  <p class="sheet-intro">Every brief in the firm is settled by a partner. There are two.</p>
+
+  <div class="partners">
+    <article class="stamp-card">
+      <div class="perf" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+      <div class="stamp-inner">
+        <p class="denom" aria-hidden="true">40</p>
+        <div class="portrait" role="img" aria-label="Portrait of Adv. Vinod Pant — photograph to be affixed">
+          <svg viewBox="0 0 120 150" aria-hidden="true">
+            <g fill="none" stroke="currentColor" stroke-width="1">
+              <ellipse cx="60" cy="52" rx="26" ry="30"/>
+              <path d="M22 148 C 22 108, 98 108, 98 148"/>
+              <path d="M34 52 h-6 M92 52 h-6 M60 16 v-6"/>
+              <path d="M14 8 h20 M14 8 v20 M106 8 h-20 M106 8 v20 M14 142 h20 M14 142 v-20 M106 142 h-20 M106 142 v-20" stroke-width="1.4"/>
+            </g>
+          </svg>
+          <p class="portrait-note">Portrait to be affixed</p>
+        </div>
+        <h3>Adv.&nbsp;Vinod&nbsp;Pant</h3>
+        <p class="stamp-role">Managing Partner · at the Bar since 2007</p>
+        <p class="stamp-quals">B.Com&nbsp;(Hons) &amp; M.Com, Delhi University · LL.B., Delhi University · MBA · ICWA</p>
+        <p class="stamp-bio">Before taking to the Bar, Mr.&nbsp;Pant spent more than forty years in
+        Indian industry, holding senior corporate positions with groups such as
+        <strong>Usha</strong> and <strong>Sriram</strong>. That career is the firm's
+        edge: he has sat on the client's side of every commercial dispute he now
+        argues, and brings a cost-accountant's eye to damages, maintenance and
+        settlement alike.</p>
+        <p class="deed-blank">Enrolment No. <span class="deed-filled">D&#8202;/&#8202;668&#8202;/&#8202;2007</span></p>
+      </div>
+    </article>
+
+    <article class="stamp-card">
+      <div class="perf" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+      <div class="stamp-inner">
+        <p class="denom" aria-hidden="true">CS</p>
+        <div class="portrait" role="img" aria-label="Portrait of Ms. Amrit Arora — photograph to be affixed">
+          <svg viewBox="0 0 120 150" aria-hidden="true">
+            <g fill="none" stroke="currentColor" stroke-width="1">
+              <ellipse cx="60" cy="52" rx="26" ry="30"/>
+              <path d="M22 148 C 22 108, 98 108, 98 148"/>
+              <path d="M34 52 h-6 M92 52 h-6 M60 16 v-6"/>
+              <path d="M14 8 h20 M14 8 v20 M106 8 h-20 M106 8 v20 M14 142 h20 M14 142 v-20 M106 142 h-20 M106 142 v-20" stroke-width="1.4"/>
+            </g>
+          </svg>
+          <p class="portrait-note">Portrait to be affixed</p>
+        </div>
+        <h3>Ms.&nbsp;Amrit&nbsp;Arora</h3>
+        <p class="stamp-role">Partner</p>
+        <p class="stamp-quals">B.Com, Delhi University · Company Secretary · LL.B.&nbsp;(2024)</p>
+        <p class="stamp-bio">A Company Secretary before she was an advocate,
+        Ms.&nbsp;Arora anchors the firm's corporate, compliance and drafting
+        practice and appears alongside Mr.&nbsp;Pant in the firm's matrimonial and
+        consumer briefs — pairing a governance professional's precision with a
+        fresh command of current procedure.</p>
+        <p class="deed-blank">Enrolment No. <span class="deed-filled">D&#8202;/&#8202;15764&#8202;/&#8202;2025</span></p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ══════════ SCHEDULE OF PRACTICE ══════════ -->
+<section class="sheet" id="practice" aria-labelledby="practice-h">
+  <svg class="watermark" data-rosette="main" viewBox="-110 -110 220 220" aria-hidden="true"></svg>
+  <h2 id="practice-h" class="sheet-h">Schedule of Practice</h2>
+  <p class="sheet-intro">Matters entertained by the firm, and the forums before which each is ordinarily pursued.</p>
+
+  <div class="schedule" role="list">
+    <article class="row" role="listitem">
+      <p class="row-index" aria-hidden="true">I</p>
+      <div class="row-body">
+        <h3>Matrimonial Disputes <span class="fee-mark">Specialisation</span></h3>
+        <p>Divorce and judicial separation, mutual-consent petitions, maintenance and
+        alimony, custody and guardianship of children, protection under the Domestic
+        Violence Act, and defence of criminal complaints arising within marriage —
+        handled with the discretion these matters demand.</p>
+      </div>
+      <p class="row-forum">Family Courts · High&nbsp;Court · Supreme&nbsp;Court</p>
+    </article>
+
+    <article class="row" role="listitem">
+      <p class="row-index" aria-hidden="true">II</p>
+      <div class="row-body">
+        <h3>Consumer Disputes <span class="fee-mark">Specialisation</span></h3>
+        <p>Delayed possession and builder defaults, repudiated insurance claims,
+        medical negligence, deficiency in banking, e-commerce and other services —
+        pleaded and argued at every tier of the consumer redressal hierarchy.</p>
+      </div>
+      <p class="row-forum">District · State · National Commission</p>
+    </article>
+
+    <article class="row" role="listitem">
+      <p class="row-index" aria-hidden="true">III</p>
+      <div class="row-body">
+        <h3>Civil Litigation</h3>
+        <p>Suits for recovery and damages, property, partition and possession,
+        injunctions, specific performance of contracts, succession and probate,
+        landlord–tenant disputes, and execution of decrees.</p>
+      </div>
+      <p class="row-forum">District Courts · High&nbsp;Court</p>
+    </article>
+
+    <article class="row" role="listitem">
+      <p class="row-index" aria-hidden="true">IV</p>
+      <div class="row-body">
+        <h3>Criminal Litigation</h3>
+        <p>Regular and anticipatory bail, trial defence, quashing of proceedings,
+        criminal appeals and revisions, and complaints for dishonour of cheques
+        under Section&nbsp;138 of the Negotiable Instruments Act.</p>
+      </div>
+      <p class="row-forum">Magistrate &amp; Sessions · High&nbsp;Court · Supreme&nbsp;Court</p>
+    </article>
+
+    <article class="row" role="listitem">
+      <p class="row-index" aria-hidden="true">V</p>
+      <div class="row-body">
+        <h3>Corporate &amp; Advisory</h3>
+        <p>Company-law and secretarial compliance, drafting and vetting of contracts,
+        deeds and settlements, and advisory shaped by four decades inside Indian
+        industry — the firm reads a balance sheet as fluently as a plaint.</p>
+      </div>
+      <p class="row-forum">Chambers · Tribunals</p>
+    </article>
+  </div>
+</section>
+
+<!-- ══════════ TERRITORIES & FORUMS ══════════ -->
+<section class="ledger" id="forums" aria-labelledby="forums-h">
+  <p class="microprint microprint-onink" aria-hidden="true"></p>
+  <h2 id="forums-h" class="ledger-h">Territories &amp; Forums of Practice</h2>
+  <p class="ledger-intro">The firm appears at every tier of both hierarchies — a matter is carried
+  as far up as it must go, by the same hands that filed it.</p>
+
+  <div class="ladders">
+    <div class="ladder" aria-label="Courts of law, ascending">
+      <h3>Courts of Law</h3>
+      <ol reversed>
+        <li class="tier tier-3">
+          <p class="tier-name">Supreme Court of India</p>
+          <p class="tier-note">Special leave, appeals &amp; transfer petitions</p>
+        </li>
+        <li class="tier tier-2">
+          <p class="tier-name">High Court of Delhi <span class="tier-amp">&amp; other High Courts</span></p>
+          <p class="tier-note">Appeals, revisions, writs &amp; quashing</p>
+        </li>
+        <li class="tier tier-1">
+          <p class="tier-name">District Courts <span class="tier-amp">Delhi &amp; other states</span></p>
+          <p class="tier-note">Suits, trials, family courts &amp; execution</p>
+        </li>
+      </ol>
+    </div>
+    <div class="ladder" aria-label="Consumer commissions, ascending">
+      <h3>Consumer Commissions</h3>
+      <ol reversed>
+        <li class="tier tier-3">
+          <p class="tier-name">National Commission <span class="tier-amp">NCDRC, New Delhi</span></p>
+          <p class="tier-note">Claims above ₹2 crore &amp; appeals</p>
+        </li>
+        <li class="tier tier-2">
+          <p class="tier-name">State Commissions</p>
+          <p class="tier-note">Claims to ₹2 crore &amp; appeals</p>
+        </li>
+        <li class="tier tier-1">
+          <p class="tier-name">District Commissions</p>
+          <p class="tier-note">Claims to ₹50 lakh — where most consumers begin</p>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ MANNER OF PROCEEDING ══════════ -->
+<section class="sheet" id="procedure" aria-labelledby="procedure-h">
+  <svg class="watermark" data-rosette="main" viewBox="-110 -110 220 220" aria-hidden="true"></svg>
+  <h2 id="procedure-h" class="sheet-h">Manner of Proceeding</h2>
+  <p class="sheet-intro">How a matter moves through the firm, from first meeting to final order.</p>
+
+  <div class="clauses">
+    <article class="clause">
+      <h3><span class="clause-no">Clause the First.</span> Consultation &amp; Opinion</h3>
+      <p>The matter is heard in full at chambers. The firm gives a candid written
+      opinion — including, where it is the honest answer, that litigation is not
+      worth its cost — and settles the strategy and fee before anything is filed.</p>
+    </article>
+    <article class="clause">
+      <h3><span class="clause-no">Clause the Second.</span> Pleadings &amp; Filing</h3>
+      <p>Plaint, petition, complaint or reply is drafted by the partners themselves,
+      settled with the client line by line, and filed in the proper forum with
+      every annexure in order.</p>
+    </article>
+    <article class="clause">
+      <h3><span class="clause-no">Clause the Third.</span> Appearances &amp; Hearings</h3>
+      <p>A partner appears at every effective hearing. After each date the client
+      receives a plain-language note of what happened and what comes next.</p>
+    </article>
+    <article class="clause">
+      <h3><span class="clause-no">Clause the Fourth.</span> Resolution</h3>
+      <p>Decree, order, settlement or award — and where the outcome warrants it,
+      appeal to the next forum. The file closes only when the client's remedy
+      is actually in hand.</p>
+    </article>
+  </div>
+</section>
+
+<!-- ══════════ EXECUTION BLOCK: CONTACT ══════════ -->
+<section class="sheet sheet-tint" id="contact" aria-labelledby="contact-h">
+  <h2 id="contact-h" class="sheet-h">In Witness Whereof</h2>
+  <p class="sheet-intro">The firm may be reached as follows. Consultations are by appointment.</p>
+
+  <div class="execution">
+    <div class="exec-fields">
+      <p class="deed-blank">Chambers&nbsp;: <span class="deed-filled">Chamber No. 500–501, Western Wing, Tis&nbsp;Hazari Court, New&nbsp;Delhi&nbsp;–&nbsp;110054</span></p>
+      <p class="deed-blank">Office&nbsp;: <span class="deed-filled">F-302, 3rd Floor, Aditya Complex, Plot No.&nbsp;6, Sector&nbsp;10 Market, Dwarka, New&nbsp;Delhi&nbsp;–&nbsp;110075</span></p>
+      <p class="deed-blank">Telephone&nbsp;: <span class="deed-filled"><a href="tel:+919313633143">+91&nbsp;93136&nbsp;33143</a> <span class="tel-who">Adv.&nbsp;Vinod&nbsp;Pant</span></span> <span class="deed-filled"><a href="tel:+918826281685">+91&nbsp;88262&nbsp;81685</a> <span class="tel-who">Ms.&nbsp;Amrit&nbsp;Arora</span></span></p>
+      <p class="deed-blank">E-mail&nbsp;: <span class="blank-line blank-wide">&nbsp;</span> <span class="replace-mark">to be affixed</span></p>
+      <p class="deed-blank">Hours&nbsp;: <span class="deed-set">10 a.m. – 6 p.m., Monday to Saturday</span></p>
+      <p class="exec-note">Visitors are received at either address by prior appointment —
+      a telephone call first is always the surer course.</p>
+    </div>
+    <div class="seal-block" aria-hidden="true">
+      <svg class="seal" viewBox="-90 -90 180 180">
+        <defs>
+          <path id="sealArcTop" d="M -62,0 A 62,62 0 0 1 62,0"/>
+          <path id="sealArcBot" d="M -70,0 A 70,70 0 0 0 70,0"/>
+        </defs>
+        <circle r="84" fill="none" stroke="currentColor" stroke-width="2.5"/>
+        <circle r="78" fill="none" stroke="currentColor" stroke-width="1"/>
+        <circle r="48" fill="none" stroke="currentColor" stroke-width="1"/>
+        <text class="seal-text"><textPath href="#sealArcTop" startOffset="50%" text-anchor="middle">DATT ASSOCIATES</textPath></text>
+        <text class="seal-text"><textPath href="#sealArcBot" startOffset="50%" text-anchor="middle">ADVOCATES · NEW DELHI</textPath></text>
+        <text class="seal-mono" y="10" text-anchor="middle">DA</text>
+      </svg>
+      <p class="seal-caption">Common seal of the firm</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="colophon">
+  <p class="microprint microprint-onink" aria-hidden="true"></p>
+  <svg class="band" data-band viewBox="0 0 1200 46" preserveAspectRatio="none" aria-hidden="true"></svg>
+  <div class="colophon-body">
+    <p class="colophon-name">Datt&nbsp;Associates</p>
+    <p class="colophon-disclaimer">As required by the Bar Council of India: this website is an
+    informational record and not an advertisement or solicitation of any kind. Its contents
+    describe the firm and the general nature of its practice; they are not legal advice, and
+    reading them creates no advocate–client relationship. Anything herein should not be
+    interpreted as soliciting work.</p>
+    <p class="colophon-fine">© 2026 Datt Associates, New Delhi · All rights reserved ·
+    <a href="#gate" id="reshow-gate">Read the disclaimer again</a></p>
+  </div>
+</footer>
+
+
+
+<script>
+/* Datt Associates — engraved instrument runtime
+   Generates the security engraving (guilloche) as real curves,
+   fills microprint rules, and runs the disclaimer gate. */
+
+(function () {
+  "use strict";
+
+  /* ── guilloche: hypotrochoid rosettes ─────────────────────── */
+  function hypotrochoid(R, r, d, rot, steps, scale) {
+    var pts = [];
+    var loops = r / gcd(R, r);
+    var max = Math.PI * 2 * loops;
+    for (var i = 0; i <= steps; i++) {
+      var t = (max * i) / steps;
+      var x = ((R - r) * Math.cos(t) + d * Math.cos(((R - r) / r) * t)) * scale;
+      var y = ((R - r) * Math.sin(t) - d * Math.sin(((R - r) / r) * t)) * scale;
+      var c = Math.cos(rot), s = Math.sin(rot);
+      pts.push((x * c - y * s).toFixed(2) + "," + (x * s + y * c).toFixed(2));
+    }
+    return "M" + pts.join("L");
+  }
+  function gcd(a, b) { while (b) { var t = b; b = a % b; a = t; } return a; }
+
+  function path(d, w, o) {
+    var p = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    p.setAttribute("d", d);
+    p.setAttribute("fill", "none");
+    p.setAttribute("stroke", "currentColor");
+    p.setAttribute("stroke-width", w);
+    if (o) p.setAttribute("opacity", o);
+    return p;
+  }
+
+  function rosette(svg, scale) {
+    var layers = scale < 1 ? [
+      [100, 48, 40, 0, 0.9, 0.9],
+      [100, 48, 40, Math.PI / 12, 0.7, 0.6],
+      [100, 48, 26, 0, 0.7, 0.7]
+    ] : [
+      [100, 62, 46, 0, 0.7, 0.9],
+      [100, 62, 46, Math.PI / 9, 0.55, 0.55],
+      [96, 36, 30, 0, 0.55, 0.7],
+      [72, 27, 22, 0, 0.5, 0.8],
+      [46, 17, 15, 0, 0.5, 0.9]
+    ];
+    layers.forEach(function (L) {
+      svg.appendChild(path(hypotrochoid(L[0], L[1], L[2], L[3], scale < 1 ? 480 : 900, scale), L[4], L[5]));
+    });
+    var ring = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    ring.setAttribute("r", 104 * scale);
+    ring.setAttribute("fill", "none");
+    ring.setAttribute("stroke", "currentColor");
+    ring.setAttribute("stroke-width", 0.8);
+    svg.appendChild(ring);
+  }
+
+  document.querySelectorAll("[data-rosette]").forEach(function (svg) {
+    rosette(svg, svg.getAttribute("data-rosette") === "small" ? 0.52 : 1);
+  });
+
+  /* ── guilloche: lattice bands ─────────────────────────────── */
+  function band(svg) {
+    var W = 1200, H = 46, mid = H / 2;
+    for (var k = 0; k < 3; k++) {
+      var amp = 14 - k * 3, freq = 0.02 + k * 0.008, phase = k * 1.1;
+      var up = [], down = [];
+      for (var x = 0; x <= W; x += 6) {
+        var y = Math.sin(x * freq + phase) * amp;
+        up.push(x + "," + (mid + y).toFixed(2));
+        down.push(x + "," + (mid - y).toFixed(2));
+      }
+      svg.appendChild(path("M" + up.join("L"), 0.7, 0.85));
+      svg.appendChild(path("M" + down.join("L"), 0.7, 0.85));
+    }
+    for (var x2 = 30; x2 < W; x2 += 60) {
+      var e = document.createElementNS("http://www.w3.org/2000/svg", "ellipse");
+      e.setAttribute("cx", x2); e.setAttribute("cy", mid);
+      e.setAttribute("rx", 16); e.setAttribute("ry", 9);
+      e.setAttribute("fill", "none");
+      e.setAttribute("stroke", "currentColor");
+      e.setAttribute("stroke-width", 0.6);
+      e.setAttribute("opacity", 0.6);
+      svg.appendChild(e);
+    }
+  }
+  document.querySelectorAll("[data-band]").forEach(band);
+
+  /* ── microprint rules ─────────────────────────────────────── */
+  var MICRO = "DATT ASSOCIATES · ADVOCATES SOLICITORS CONSULTANTS · NEW DELHI · ";
+  document.querySelectorAll(".microprint").forEach(function (el) {
+    el.textContent = MICRO.repeat(24);
+  });
+
+  /* ── disclaimer gate ──────────────────────────────────────── */
+  var gate = document.getElementById("gate");
+  var agree = document.getElementById("gate-agree");
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!gate || !agree) return;
+
+  function openGate() {
+    gate.hidden = false;
+    gate.classList.remove("lifting", "stamped");
+    document.body.style.overflow = "hidden";
+    agree.focus({ preventScroll: true });
+  }
+  function closeGate() {
+    gate.classList.add("stamped");
+    var delay = reduced ? 0 : 900;
+    setTimeout(function () {
+      gate.classList.add("lifting");
+      document.body.style.overflow = "";
+      try { sessionStorage.setItem("da-gate", "agreed"); } catch (e) {}
+      setTimeout(function () { gate.hidden = true; }, reduced ? 0 : 500);
+    }, delay);
+  }
+
+  var seen = /[?&]nogate/.test(location.search);
+  try { seen = seen || sessionStorage.getItem("da-gate") === "agreed"; } catch (e) {}
+  if (seen) { gate.hidden = true; } else { openGate(); }
+
+  agree.addEventListener("click", closeGate);
+
+  /* keep focus inside the gate while it is open */
+  document.addEventListener("focusin", function (e) {
+    if (!gate.hidden && !gate.classList.contains("lifting") && !gate.contains(e.target)) {
+      agree.focus({ preventScroll: true });
+    }
+  });
+
+  var reshow = document.getElementById("reshow-gate");
+  if (reshow) {
+    reshow.addEventListener("click", function (e) {
+      e.preventDefault();
+      try { sessionStorage.removeItem("da-gate"); } catch (err) {}
+      window.scrollTo({ top: 0, behavior: reduced ? "auto" : "smooth" });
+      openGate();
+    });
+  }
+})();
+
+</script>

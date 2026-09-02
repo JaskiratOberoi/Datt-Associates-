@@ -16,7 +16,7 @@ Prospective litigants in Delhi and other Indian states — individuals facing ma
 
 ## Product Purpose
 
-Informational website for Datt Associates, a Delhi-based firm of advocates, solicitors and consultants. Success = a visitor understands the firm's practice areas and partner credentials within seconds and initiates contact (call/visit/enquiry) for a consultation.
+Informational website for Datt & Associates, a Delhi-based firm of advocates, solicitors and consultants. Success = a visitor understands the firm's practice areas and partner credentials within seconds and initiates contact (call/visit/enquiry) for a consultation.
 
 ## Positioning
 
@@ -37,7 +37,7 @@ Indian litigation practice: appearances at all Delhi district courts, the Delhi 
 
 ## Brand Commitments
 
-Firm name: "Datt Associates". No logo, colors, or typography exist yet. Tone: dignified, credible, informational — consistent with Indian legal-profession norms.
+Firm name: "Datt & Associates" (rebranded from "Datt Associates", user-directed 2026-09-02). No logo beyond the site's own marks. Tone: dignified, credible, informational — consistent with Indian legal-profession norms.
 
 ## Evidence on Hand
 

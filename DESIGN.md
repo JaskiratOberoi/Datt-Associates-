@@ -1,5 +1,5 @@
 ---
-name: Datt Associates
+name: Datt & Associates
 description: An engraved Indian stamp-paper legal instrument — security printing as a law firm's credibility.
 colors:
   paper: "#e9e2cf"
@@ -94,7 +94,7 @@ components:
     padding: "0.2rem 0.5rem"
 ---
 
-# Design System: Datt Associates
+# Design System: Datt & Associates
 
 ## Overview
 

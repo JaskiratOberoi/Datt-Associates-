@@ -293,7 +293,10 @@ h1, h2, h3 { font-family: var(--serif-d); font-weight: 400; line-height: 1.15; t
 .stamp-card {
   position: relative; background: var(--paper-hi);
   box-shadow: 0 10px 30px -14px rgba(34,28,16,.55);
+  display: flex; flex-direction: column;
 }
+.stamp-card .stamp-inner { flex: 1; display: flex; flex-direction: column; }
+.stamp-card .stamp-bio { flex: 1; }
 .perf span { position: absolute; z-index: 2; }
 .perf span:nth-child(1) { top: -1px; left: 0; right: 0; height: 9px;
   background: radial-gradient(circle 4.5px at 8px 0, var(--paper-tint) 98%, transparent) repeat-x left top / 16px 9px; }
